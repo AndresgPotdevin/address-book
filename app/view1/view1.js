@@ -16,4 +16,8 @@ angular.module('myApp.view1', ['ngRoute'])
     $scope.contacts = response.data.AddressBook.Contact;
     console.log(self.contacts);
   });
+
+  $scope.orderByMe = function(x) {
+    $scope.myOrderBy = x;
+  }
 });

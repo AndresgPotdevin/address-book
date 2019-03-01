@@ -1,22 +1,22 @@
 <div class="container-fluid">
   <table class="table table-responsive table-striped table-bordered table-hover table-sm">
-    <thead class="thead-dark text-center small">
+    <thead class="thead-light text-center small">
       <tr>
-        <th>CustomerID</th>
-        <th>CompanyName</th>
-        <th>ContactName</th>
-        <th>ContactTitle</th>
-        <th>Address</th>
-        <th>City</th>
-        <th>Country</th>
-        <th>PostalCode</th>
-        <th>Email</th>
-        <th>Phone</th>
-        <th>Fax</th>
+        <th ng-click="orderByMe('CustomerID')">CustomerID</th>
+        <th ng-click="orderByMe('CompanyName')">CompanyName</th>
+        <th ng-click="orderByMe('ContactName')">ContactName</th>
+        <th ng-click="orderByMe('ContactTitle')">ContactTitle</th>
+        <th ng-click="orderByMe('Address')">Address</th>
+        <th ng-click="orderByMe('City')">City</th>
+        <th ng-click="orderByMe('Country')">Country</th>
+        <th ng-click="orderByMe('PostalCode')">PostalCode</th>
+        <th ng-click="orderByMe('Email')">Email</th>
+        <th ng-click="orderByMe('Phone')">Phone</th>
+        <th ng-click="orderByMe('Fax')">Fax</th>
       </tr>
     </thead>
     <tbody class="small">
-      <tr ng-repeat="i in contacts">
+      <tr ng-repeat="i in contacts | orderBy:myOrderBy">
         <td style="width: 3%">{{i.CustomerID}}</td>
         <td>{{i.CompanyName}}</td>
         <td>{{i.ContactName}}</td>
