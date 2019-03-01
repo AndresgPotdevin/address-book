@@ -1,1 +1,34 @@
-<p>This is the partial for view 1.</p>
+<div class="container-fluid">
+  <table class="table table-responsive table-striped table-bordered table-hover table-sm">
+    <thead class="thead-dark text-center">
+      <tr>
+        <th>CustomerID</th>
+        <th>CompanyName</th>
+        <th>ContactName</th>
+        <th>ContactTitle</th>
+        <th>Address</th>
+        <th>City</th>
+        <th>Country</th>
+        <th>PostalCode</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Fax</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="i in contacts" class="small">
+        <td>{{i.CustomerID}}</td>
+        <td>{{i.CompanyName}}</td>
+        <td>{{i.ContactName}}</td>
+        <td>{{i.ContactTitle}}</td>
+        <td style="width: 10%">{{i.Address}}</td>
+        <td>{{i.City}}</td>
+        <td>{{i.Country}}</td>
+        <td>{{i.PostalCode}}</td>
+        <td>{{i.Email}}</td>
+        <td>{{i.Phone}}</td>
+        <td>{{i.Fax}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

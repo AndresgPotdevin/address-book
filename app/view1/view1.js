@@ -9,6 +9,11 @@ angular.module('myApp.view1', ['ngRoute'])
   });
 }])
 
-.controller('View1Ctrl', [function() {
+.controller('View1Ctrl', function ($scope, $http) {
+  $scope.orderProp = 'CustomerID';
 
-}]);
+  $http.get('contacts/contacts.json').then(function(response) {
+    $scope.contacts = response.data.AddressBook.Contact;
+    console.log(self.contacts);
+  });
+});

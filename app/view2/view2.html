@@ -1,5 +1,23 @@
-<p>This is the partial for view 2.</p>
-<p>
-  Showing of 'interpolate' filter:
-  {{ 'Current version is v%VERSION%.' | interpolate }}
-</p>
+<div class="container-fluid">
+  <div class="row">
+    <div ng-repeat="i in contacts">
+      <div class="clearfix" ng-if="$index % 3 == 0"></div>
+      <div class="col-sm-4">
+        <div class="card" style="width: 20rem;">
+          <div class="card-body">
+            <h5 class="card-title">{{i.ContactName}}</h5>
+            <p class="card-text"> <strong>{{i.CompanyName}}</strong></p>
+            <p class="card-text">{{i.ContactTitle}}</p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">{{i.Address}}, {{i.City}}, {{i.Country}}, {{i.PostalCode}}</li>
+            <li class="list-group-item">{{i.Email}}</li>
+            <li class="list-group-item">Phone: {{i.Phone}}</li>
+            <li class="list-group-item">Fax: {{i.Fax}}</li>
+          </ul>
+        </div>
+      </div>
+      <br>
+    </div>
+  </div>
+</div>
