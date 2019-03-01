@@ -1,9 +1,18 @@
-<div class="container-fluid">
+<div class="container-fluid" ng-controller="View2Ctrl">
+  <div class="form-group row">
+    <div class="col-6">
+      <label for="ex1"><strong>Search:</strong></label>
+      <input class="form-control" id="ex1" type="text" ng-model="test">
+    </div>
+  </div>
+  <div class="alert alert-warning col-4 text-center" role="alert">
+    Type any name, company, address, or country to narrow your search.
+  </div>
   <div class="row">
-    <div ng-repeat="i in contacts">
+    <div ng-repeat="i in contacts | filter:test">
       <div class="clearfix" ng-if="$index % 3 == 0"></div>
-      <div class="col-sm-4">
-        <div class="card text-white bg-dark" style="width: 26rem;">
+      <div class="container-fluid">
+        <div class="card text-white bg-dark" style="width: 26rem; height:26rem">
           <div class="card-body">
             <h5 class="card-title">{{i.ContactName}}</h5>
             <p class="card-text"> <strong>{{i.CompanyName}}</strong></p>
