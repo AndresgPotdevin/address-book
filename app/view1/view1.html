@@ -1,6 +1,6 @@
 <div class="container-fluid">
   <table class="table table-responsive table-striped table-bordered table-hover table-sm">
-    <thead class="thead-dark text-center">
+    <thead class="thead-dark text-center small">
       <tr>
         <th>CustomerID</th>
         <th>CompanyName</th>
@@ -15,13 +15,13 @@
         <th>Fax</th>
       </tr>
     </thead>
-    <tbody>
-      <tr ng-repeat="i in contacts" class="small">
-        <td>{{i.CustomerID}}</td>
+    <tbody class="small">
+      <tr ng-repeat="i in contacts">
+        <td style="width: 3%">{{i.CustomerID}}</td>
         <td>{{i.CompanyName}}</td>
         <td>{{i.ContactName}}</td>
         <td>{{i.ContactTitle}}</td>
-        <td style="width: 10%">{{i.Address}}</td>
+        <td style="width: 15%">{{i.Address}}</td>
         <td>{{i.City}}</td>
         <td>{{i.Country}}</td>
         <td>{{i.PostalCode}}</td>
