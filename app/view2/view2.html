@@ -3,13 +3,13 @@
     <div ng-repeat="i in contacts">
       <div class="clearfix" ng-if="$index % 3 == 0"></div>
       <div class="col-sm-4">
-        <div class="card border-info" style="width: 26rem;">
-          <div class="card-body text-info">
+        <div class="card text-white bg-dark" style="width: 26rem;">
+          <div class="card-body">
             <h5 class="card-title">{{i.ContactName}}</h5>
             <p class="card-text"> <strong>{{i.CompanyName}}</strong></p>
             <p class="card-text">{{i.ContactTitle}}</p>
           </div>
-          <ul class="list-group list-group-flush">
+          <ul class="list-group list-group-flush text-dark">
             <li class="list-group-item">{{i.Address}}, {{i.City}}, {{i.Country}}, {{i.PostalCode}}</li>
             <li class="list-group-item">{{i.Email}}</li>
             <li class="list-group-item">Phone: {{i.Phone}}</li>
